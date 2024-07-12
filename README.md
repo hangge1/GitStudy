@@ -29,7 +29,7 @@ My experience of restuding git command etc.
 
 
 
-创建版本库：
+**创建版本库：**
 
 ```bash
 mkdir learngit
@@ -37,7 +37,7 @@ cd learngit
 git init
 ```
 
-文件添加到版本库：
+**文件添加到版本库：**
 
 注：
 
@@ -49,6 +49,80 @@ git init
 git add xxx.txt
 git commit -m "wrote a readme file"
 ```
+
+
+
+**查询仓库状态：**
+
+```
+git status
+```
+
+
+
+**查询当前工作目录某文件和版本库对比的修改内容：**
+
+```
+git diff [filename]
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
