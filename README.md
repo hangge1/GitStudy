@@ -68,13 +68,37 @@ git diff [filename]
 
 
 
+**查询提交记录：**
+
+```
+git log
+git log --pretty=oneline
+
+//默认显示从最近到最远的日志记录
+git log
+commit 7fb71cb4b3bad42dfca6760f1c726ec160de463a (HEAD -> main)
+Author: hangdada <824362330@qq.com>
+Date:   Fri Jul 12 17:55:03 2024 +0800
+
+    Git add distributed
+
+commit d2ce32f101ce47c7236e473d8027bca4ffa4cd7c
+Author: hangdada <824362330@qq.com>
+Date:   Fri Jul 12 17:52:08 2024 +0800
+
+    add diff to readme.txt
+
+//如果觉得信息太多，可加上 --pretty=oneline参数
+git log --pretty=oneline
+7fb71cb4b3bad42dfca6760f1c726ec160de463a (HEAD -> main) Git add distributed
+d2ce32f101ce47c7236e473d8027bca4ffa4cd7c add diff to readme.txt
+e1c65d87b6d27bff8729556b51e3bac1edfddd0f add readme file.txt
+af7fb6de80b6e3a44e32bcca0092ab945d550e1c (origin/main, origin/HEAD) Initial commit
+```
 
 
 
-
-
-
-
+**版本回退：**
 
 
 
