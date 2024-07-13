@@ -166,17 +166,17 @@ git commit命令的本质就是将暂存区的记录提交到版本库；
 
 
 
-
-
 **撤销暂存区的修改：**
 
 `git reset HEAD [file]`
 
 
 
+**从版本库删除文件：**
 
+`git rm [file]`
 
-
+如果手动删除某版本库存在的文件，正常提交git commit是通过不了的，必须先`git rm xxx`，再commit！
 
 
 
