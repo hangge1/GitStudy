@@ -146,7 +146,7 @@ git commit命令的本质就是将暂存区的记录提交到版本库；
 
 
 
-**撤销修改：**
+**针对工作区修改的撤销：**
 
 两种情况：
 
@@ -156,7 +156,9 @@ git commit命令的本质就是将暂存区的记录提交到版本库；
 
 
 
-`git checkout -- readme.txt`
+`git checkout -- [file]`
+
+`git restore [file]`
 
 针对1情况：恢复该文件到最新版本库一样
 
@@ -166,7 +168,9 @@ git commit命令的本质就是将暂存区的记录提交到版本库；
 
 
 
+**撤销暂存区的修改：**
 
+`git reset HEAD [file]`
 
 
 
