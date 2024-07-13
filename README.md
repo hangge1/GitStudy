@@ -100,11 +100,23 @@ af7fb6de80b6e3a44e32bcca0092ab945d550e1c (origin/main, origin/HEAD) Initial comm
 
 **版本回退：**
 
+```
+git reset --hard [commitid]  回退到指定版本
+git reset --hard HEAD^ 回退到当前版本的上一个版本
+```
 
+回退之后，通过`git log` 就查不到回退之前的commitid了，但是如果真的后悔了，怎么办？
 
-
-
-
+```
+git reflog 它会输出你的每一次命令，就可以找到对应的记录，寻找到之前的commitid，就可以回退回去！
+-----------------
+7fb71cb (HEAD -> main) HEAD@{0}: reset: moving to HEAD^
+e95f5c3 (origin/main, origin/HEAD) HEAD@{1}: reset: moving to e95f5c3f
+7fb71cb (HEAD -> main) HEAD@{2}: reset: moving to HEAD^
+e95f5c3 (origin/main, origin/HEAD) HEAD@{3}: reset: moving to HEAD
+e95f5c3 (origin/main, origin/HEAD) HEAD@{4}: clone: from github.com:hangge1/GitStudy.git
+最左侧，就是HEAD版本号的切换情况
+```
 
 
 
