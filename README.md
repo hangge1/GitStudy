@@ -122,11 +122,45 @@ e95f5c3 (origin/main, origin/HEAD) HEAD@{4}: clone: from github.com:hangge1/GitS
 
 
 
+理解工作区、暂存区、版本库的概念。
+
+git add命令的本质就是将工作区的文件新增、修改、删除情况，反馈到暂存区；
+
+git commit命令的本质就是将暂存区的记录提交到版本库；
+
+![image-20240713172457072](./README.assets/image-20240713172457072.png)
 
 
 
 
 
+
+
+理解Git跟踪修改，举个简单例子：
+
+`第一次修改readme.txt`->`git add readme.txt`->`第二次修改readme.txt`->`git commit`
+
+最终的就是就是将第一次修改保存到版本库上！
+
+
+
+
+
+**撤销修改：**
+
+两种情况：
+
+1、修改某文件后，还没提交到暂存区
+
+2、修改文件并已提交到暂存区后，又修改该文件
+
+
+
+`git checkout -- readme.txt`
+
+针对1情况：恢复该文件到最新版本库一样
+
+针对2情况：恢复到提交到暂存区的情况
 
 
 
