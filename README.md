@@ -184,6 +184,23 @@ git commit命令的本质就是将暂存区的记录提交到版本库；
 
 
 
+**多人协作：**
+
+查看远程库名称：`git remote`
+
+查看远程库详细信息：`git remote -v`
+
+推送分支到远程：`git push [remote_resposoty_name] [local_branch_name]`
+
+同步已绑定远程库分支的本地分支：`git pull`
+
+指定本地分支和远程分支链接：
+
+`git branch --set-upstream-to=[remote_rep_branch_name] [local_branch_name]`
+
+例如：
+
+`git branch --set-upstream-to=origin/dev dev`
 
 
 
@@ -191,20 +208,65 @@ git commit命令的本质就是将暂存区的记录提交到版本库；
 
 
 
+**Rebase：**
+
+有待进一步了解
 
 
 
 
 
+**标签管理：**
+
+发布一个版本时，我们通常先在版本库中打一个标签（tag），这样，就唯一确定了打标签时刻的版本，标签也是版本库的一个快照！
+
+标签的本质：指向某个commit的指针（跟分支很像对不对？但是分支可以移动，标签不能移动）
+
+
+
+已经有了commitid，为啥还需要tag呢？
+
+答：他可以用更加有意义、可读、可理解的办事，标明改版本！
+
+
+
+给当前分支添加标签：`git tag [tag_name]`
+
+针对某个历史commit添加标签：`git tag [tag_name] [commit_id]`
+
+查看所有标签：`git tag`
+
+查看某标签详细信息：`git show [tag_name]`
+
+创建带有说明的标签：`git tag -a [tag_name] -m "说明" [commit_id]`
+
+删除标签：`git tag -d [tag_name]`
+
+推送某标签到远程：`git push [remote_rep_name] [tag_name]`，如：`git push origin v1.0`
+
+一次性推送全部尚未推送到远程的本地标签：`git push origin --tags`
+
+删除远程仓库标签：
+
+（1）本地删除标签：`git tag -d [tag_name]`
+
+（2）删除远程标签：`git push origin :refs/tags/[tag_name]`
 
 
 
 
 
+**参与Github开源项目：**
 
+最简步骤：
 
+1、fork目标项目
 
+2、clone到自己本地
 
+3、修复提交到自己分支
+
+4、申请pull request
 
 
 
